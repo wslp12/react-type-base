@@ -1,6 +1,6 @@
 # 리액트 타입스크립트 베이스 프로젝트
 
-해당 프로젝트는 [Create React App](https://github.com/facebook/create-react-app) 를 사용하지 않음.
+** 해당 프로젝트는 [Create React App](https://github.com/facebook/create-react-app) 를 사용하지 않고 전부 직접 작성 하였'
 
 실행 가능한 명령어:
 
