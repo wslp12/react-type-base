@@ -1,5 +1,5 @@
 {
-  "include": ["src/index.tsx"],
+  "include": ["src/**/*"],
   "compilerOptions": {
     "outDir": "./dist",
     "target": "ES5",
@@ -9,6 +9,7 @@
     "declarationMap": true,
     "sourceMap": true,
     "removeComments": true,
-    "strict": true
+    "strict": true,
+    "rootDir": "./src"
   }
 }

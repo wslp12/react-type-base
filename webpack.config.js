@@ -1,3 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable no-var */
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -17,6 +20,7 @@ module.exports = {
     host: 'localhost',
     allowedHosts: ['.lululala.co.kr'],
     port: 9000,
+    historyApiFallback: true,
   },
   module: {
     rules: [
