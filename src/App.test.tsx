@@ -7,8 +7,8 @@ const user = {
   id: 202,
 };
 
-describe('App', function () {
-  it('should display pass in number', function () {
+describe('App', () => {
+  it('App 컴포넌트가 hello 를 출력하지 못하였음', () => {
     render(<App />);
     expect(screen.getByText('hello')).toBeInTheDocument();
   });
