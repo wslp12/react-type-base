@@ -31,13 +31,10 @@ module.exports = {
         use: 'ts-loader',
       },
       {
-        include: [
-          path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'playground'),
-        ],
+        include: [path.resolve(__dirname, 'src')],
         test: /\.css$/,
         exclude: /node_modules/,
-        use: 'css-loader',
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },

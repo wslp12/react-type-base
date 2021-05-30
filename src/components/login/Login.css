@@ -1,0 +1,4 @@
+.fcontainer {
+  display: flex;
+  flex-direction: column;
+}
