@@ -8,8 +8,11 @@ const user = {
 };
 
 describe('App', () => {
-  it('App 컴포넌트가 hello 를 출력하지 못하였음', () => {
+  it('App 컴포넌트가 hello 가 출력이 됨 ', () => {
     render(<App />);
-    expect(screen.getByText('hello')).toBeInTheDocument();
+    // expect(screen.getByText('hello')).toBeInTheDocument();
+    const appElement = screen.getByTestId('app-1');
+    expect(appElement).toBeInTheDocument();
+    expect(appElement).toHaveTextContent('Hello');
   });
 });
