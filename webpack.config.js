@@ -3,7 +3,13 @@
 /* eslint-disable no-var */
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
+console.log(process.env);
+console.log(process.env.REACT_APP_ASDF);
+console.log(process.env.ASDF);
+// console.log(process.env.dev);
+// console.log(process.ASDF);
 module.exports = {
   mode: 'development',
   target: 'es5',
@@ -36,11 +42,22 @@ module.exports = {
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
+    }),
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(process.env),
     }),
   ],
 };

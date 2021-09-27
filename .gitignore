@@ -1,22 +1,17 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# 의존성 모듈 폴더 및 파일
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
+# 테스팅 폴더
 /coverage
 
-# production
+# 빌드 결과물
 /build
 
-# misc
+# 환경설정
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
 
 npm-debug.log*
 yarn-debug.log*
