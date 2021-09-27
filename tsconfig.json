@@ -1,15 +1,15 @@
 {
-  "include": ["src/**/*"],
+  // "include": ["src/**/*"],
   "compilerOptions": {
-    "outDir": "./dist-type",
-    "target": "ES5",
+    // "outDir": "./dist-type",
+    "target": "es5",
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "declaration": true,
-    "declarationMap": true,
+    // "declaration": true,
+    // "declarationMap": true,
     "sourceMap": true,
     "removeComments": true,
-    "strict": true,
-    "rootDir": "./src"
+    "strict": true
+    // "rootDir": "./src"
   }
 }

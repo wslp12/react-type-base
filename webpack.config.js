@@ -10,7 +10,8 @@ module.exports = {
   target: 'es5',
   entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
-    filename: '[name].js',
+    // filename: '[name].js', // NOTE [name] webpack 자동생성
+    filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
