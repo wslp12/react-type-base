@@ -9,6 +9,7 @@
 # 빌드 결과물
 /build
 /dist
+/dist-type
 
 # 환경설정
 .DS_Store
