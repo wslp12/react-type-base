@@ -1,7 +1,7 @@
 {
   "recommendations": [
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
+    "SimonSiefke.prettier-vscode",
     "ExodiusStudios.comment-anchors",
     "msjsdiag.debugger-for-chrome",
     "EditorConfig.EditorConfig"
