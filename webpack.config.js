@@ -5,20 +5,16 @@ var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
-console.log(process.env);
-console.log(process.env.REACT_APP_ASDF);
-console.log(process.env.ASDF);
-// console.log(process.env.dev);
-// console.log(process.ASDF);
 module.exports = {
   mode: 'development',
   target: 'es5',
   entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
-    extensions: ['.js', '.ts', '.tsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   devtool: 'source-map',
   devServer: {
