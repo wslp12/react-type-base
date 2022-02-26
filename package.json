@@ -1,6 +1,6 @@
 {
-  "name": "strungletype",
-  "version": "0.1.0",
+  "name": "reactbase",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "@types/react": "^17.0.0",
@@ -44,10 +44,9 @@
   },
   "scripts": {
     "start:prod": "env-cmd -e prod webpack serve",
-    "start:dev": "env-cmd -e dev webpack serve",
+    "start:local": "env-cmd -e local webpack serve",
     "build:prod": "env-cmd -e prod npx webpack --config webpack.config.js",
-    "build:dev": "env-cmd -e dev npx webpack --config webpack.config.js",
-    "build:type": "tsc -p .",
+    "build:local": "env-cmd -e local npx webpack --config webpack.config.js",
     "test": "jest",
     "test:cover": "jest --coverage"
   },
