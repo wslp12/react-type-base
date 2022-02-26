@@ -10,7 +10,6 @@ module.exports = {
   target: 'es5',
   entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
-    // filename: '[name].js', // NOTE [name] webpack 자동생성
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
   },
@@ -19,9 +18,7 @@ module.exports = {
   },
   devtool: 'source-map',
   devServer: {
-    // external 0.0.0.0
     host: 'localhost',
-    allowedHosts: ['.lululala.co.kr'],
     port: 9000,
     historyApiFallback: true,
   },
