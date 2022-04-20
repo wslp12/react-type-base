@@ -1,10 +1,29 @@
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
-module.exports = {
-  mode: 'development',
-  target: 'es5',
+const mode = process.env.mode;
+console.log('실행 모드: ', mode);
+
+const plugins = [
+  new webpack.DefinePlugin({
+    'process.env.react_base': JSON.stringify({
+      mode,
+    }),
+  }),
+  new HtmlWebpackPlugin({
+    template: path.resolve(__dirname, 'public/index.html'),
+    inject: 'body',
+  }),
+  new webpack.DefinePlugin({
+    'process.env': JSON.stringify(process.env),
+  }),
+];
+
+const devTool = mode === 'production' ? {} : { devtool: 'source-map' };
+const result = {
+  mode,
+  target: 'web',
   entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
     filename: 'index.js',
@@ -13,11 +32,12 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
-  devtool: 'source-map',
+
   devServer: {
     host: 'localhost',
     port: 9000,
     historyApiFallback: true,
+    open: true,
   },
   module: {
     rules: [
@@ -43,13 +63,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public/index.html'),
-      inject: 'body',
-    }),
-    new webpack.DefinePlugin({
-      'process.env': JSON.stringify(process.env),
-    }),
-  ],
+  plugins,
 };
+
+module.exports = { ...result, ...devTool };

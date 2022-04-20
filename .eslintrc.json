@@ -24,6 +24,7 @@
   "ignorePatterns": ["webpack.config.js"],
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
+    "no-console": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "comma-style": "off", // prettier 에서 관리
     "object-curly-newline": "off", // prettier 에서 관리
