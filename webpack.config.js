@@ -4,6 +4,12 @@ const webpack = require('webpack');
 
 const mode = process.env.mode;
 console.log('실행 모드: ', mode);
+const target = process.env.target;
+
+const entry =
+  process.env.target === 'web'
+    ? path.resolve(__dirname, `src/renderer/index.tsx`)
+    : path.resolve(__dirname, `src/main/index.ts`);
 
 const plugins = [
   new webpack.DefinePlugin({
@@ -23,11 +29,11 @@ const plugins = [
 const devTool = mode === 'production' ? {} : { devtool: 'source-map' };
 const result = {
   mode,
-  target: 'web',
-  entry: path.resolve(__dirname, 'src/index.tsx'),
+  target,
+  entry,
   output: {
-    filename: 'index.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
+    path: path.resolve(__dirname, `dist-${target}`),
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],

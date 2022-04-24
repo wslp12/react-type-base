@@ -2,6 +2,7 @@
   "name": "reactbase",
   "version": "0.1.1",
   "private": true,
+  "main": "dist-electron-main/main.js",
   "dependencies": {
     "electron": "^18.1.0",
     "electron-builder": "^23.0.3",
@@ -50,10 +51,9 @@
     "webpack-dev-server": "^4.8.1"
   },
   "scripts": {
-    "start:prod": "env-cmd -e prod webpack serve",
-    "start:local": "env-cmd -e local webpack serve",
-    "build:prod": "env-cmd -e prod npx webpack --config webpack.config.js",
-    "build:local": "env-cmd -e local npx webpack --config webpack.config.js",
+    "build:local:main": "env-cmd -e main,local npx webpack --config webpack.config.js --watch",
+    "start:local:web": "env-cmd -e renderer,local webpack serve",
+    "se": "electron .",
     "test": "jest",
     "test:cover": "jest --coverage"
   },

@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { Link, Outlet } from 'react-router-dom';
 // import ha from './assets/ha.jpeg';
 
