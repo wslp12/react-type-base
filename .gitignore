@@ -10,6 +10,7 @@
 /build
 /dist
 /dist-type
+/dist-electron-main
 
 # 환경설정
 .DS_Store

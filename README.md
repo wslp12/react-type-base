@@ -4,6 +4,12 @@
 
 ```json
 {
+  "main": {
+    "target": "electron-main"
+  },
+  "renderer": {
+    "target": "web"
+  },
   "prod": {
     "mode": "production"
   },
