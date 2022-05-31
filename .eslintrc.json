@@ -24,7 +24,11 @@
   "ignorePatterns": ["webpack.config.js"],
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
+    "indent": "off", // prettier 에서 관리
+    "quotes": "off", // prettier 에서 관리
+    "react/jsx-no-useless-fragment": "off", // prettier 에서 관리
     "no-console": "off",
+    "implicit-arrow-linebreak": "off", // prettier 에서 관리
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "comma-style": "off", // prettier 에서 관리
     "object-curly-newline": "off", // prettier 에서 관리
@@ -49,6 +53,10 @@
           "**/*.spec.tsx"
         ]
       }
-    ]
+    ],
+    "operator-linebreak": "off", // 프리티어에서 관리
+    "react/jsx-one-expression-per-line": "off", // 프리티어에서 관리
+    "react/jsx-wrap-multilines": "off", // 프리티어에서 관리
+    "no-else-return": ["error", { "allowElseIf": true }] // LINK src/AppRoutes.tsx:23
   }
 }
