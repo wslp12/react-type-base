@@ -14,6 +14,7 @@ const plugins = [
   new HtmlWebpackPlugin({
     template: path.resolve(__dirname, 'public/index.html'),
     inject: 'body',
+    publicPath: '/',
   }),
   new webpack.DefinePlugin({
     'process.env': JSON.stringify(process.env),
