@@ -13,8 +13,8 @@
 
 # 환경설정
 .DS_Store
-.env.*
-.env-cmdrc*
+# 필요 할 경우 아래 환경 변수를 활성화 시키세요
+#.env-cmdrc*
 
 npm-debug.log*
 yarn-debug.log*
