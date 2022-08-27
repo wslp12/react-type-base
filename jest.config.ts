@@ -24,6 +24,13 @@ const config: Config.InitialOptions = {
   // should contain `test` or `spec`.
   // testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
 
+  // NOTE 이미지 파일 mocked
+  moduleNameMapper: {
+    '\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/mocks/fileMock.js',
+    // '\\.(css|less)$': '<rootDir>/mocks/fileMock.js',
+  },
+
   // Module file extensions for importing
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   verbose: true,

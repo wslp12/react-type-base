@@ -48,7 +48,7 @@
     "start:local": "env-cmd -e local webpack serve",
     "build:local": "env-cmd -e local npx webpack --config webpack.config.js",
     "test": "jest",
-    "test:cover": "jest --coverage"
+    "cover": "jest --coverage"
   },
   "browserslist": {
     "production": [
