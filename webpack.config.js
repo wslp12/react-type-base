@@ -40,19 +40,18 @@ const result = {
   module: {
     rules: [
       {
-        include: path.resolve(__dirname, 'src'),
         test: /\.(ts|tsx)/,
         exclude: /node_modules/,
         use: 'ts-loader',
       },
       {
-        include: [path.resolve(__dirname, 'src')],
         test: /\.css$/,
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'file-loader',
