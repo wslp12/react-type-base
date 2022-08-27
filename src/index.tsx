@@ -9,6 +9,7 @@ import './index.css';
 const id = 'root';
 const rootElem = document.getElementById(id);
 if (rootElem) {
+  console.log(process.env.R_MODE);
   const root = ReactDOM.createRoot(rootElem);
   root.render(
     <React.StrictMode>

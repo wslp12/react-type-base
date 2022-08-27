@@ -2,15 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
-const mode = process.env.mode;
-console.log('실행 모드: ', mode);
+const MODE = process.env.R_MODE;
+const RUN_MODE = process.env.R_RUN_MODE;
+console.log('실행 모드: ', MODE);
+console.log('런타임 실행 환경: ', RUN_MODE);
 
 const plugins = [
-  new webpack.DefinePlugin({
-    'process.env.react_base': JSON.stringify({
-      mode,
-    }),
-  }),
   new HtmlWebpackPlugin({
     template: path.resolve(__dirname, 'public/index.html'),
     inject: 'body',
@@ -21,9 +18,9 @@ const plugins = [
   }),
 ];
 
-const devTool = mode === 'production' ? {} : { devtool: 'source-map' };
+const devTool = MODE === 'production' ? {} : { devtool: 'source-map' };
 const result = {
-  mode,
+  mode: MODE,
   target: 'web',
   entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {

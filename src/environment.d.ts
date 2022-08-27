@@ -1,9 +1,8 @@
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      react_base: {
-        mode: 'development' | 'production';
-      };
+      R_MODE: 'development' | 'production';
+      R_RUN_MODE: 'development' | 'production' | 'local';
     }
   }
 }
