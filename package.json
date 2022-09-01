@@ -47,6 +47,7 @@
   "scripts": {
     "start:local": "env-cmd -e local webpack serve",
     "build:local": "env-cmd -e local npx webpack --config webpack.config.js",
+    "build:prod": "env-cmd -e prod npx webpack --config webpack.config.js",
     "test": "jest",
     "cover": "jest --coverage"
   },
