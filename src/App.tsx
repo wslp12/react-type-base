@@ -5,7 +5,6 @@ import { Link, Outlet } from 'react-router-dom';
 function App() {
   return (
     <>
-      {/* <img src={ha} alt="화평씨 얼굴" style={{ width: 300 }} /> */}
       <div data-testid="app-1">
         {process.env.ASDF}
         test Hello
