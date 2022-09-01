@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import App from './App';
 import Hello from './components/Hello';
+import Image from './components/Image';
 import Item from './components/Item';
 import './index.css';
 
@@ -18,6 +19,7 @@ if (rootElem) {
           <Route path="/" element={<App />}>
             <Route path="main/:1" element={<Outlet />}>
               <Route path="item/:itemParam" element={<Item />} />
+              <Route path="image" element={<Image />} />
             </Route>
             <Route element={<Hello />} />
           </Route>
